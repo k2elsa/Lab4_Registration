@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -9,89 +9,89 @@
 <body>
   <div class="container">
     <h1>Student Registration</h1>
-<div class="flex-wrapper">
-  <div class="form-section">
-    <form id="registrationForm">
-      <div class="input-box">
-        <label for="firstName">First Name</label>
-        <input type="text" id="firstName" required />
-        <span class="error" id="err-firstName"></span>
+    <div class="flex-wrapper">
+      <div class="form-section">
+        <form id="registrationForm">
+          <div class="input-box">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" required />
+            <span class="error" id="err-firstName"></span>
+          </div>
+
+          <div class="input-box">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" required />
+            <span class="error" id="err-lastName"></span>
+          </div>
+
+          <div class="input-box">
+            <label for="email">Email</label>
+            <input type="email" id="email" required />
+            <span class="error" id="err-email"></span>
+          </div>
+
+          <div class="input-box">
+            <label for="programme">Programme</label>
+            <select id="programme" required>
+              <option value="">Select a Programme </option>
+              <option value="Computer Science">Computer Science</option>
+              <option value="Software Engineering">Software Engineering</option>
+              <option value="Data Science">Data Science</option>
+              <option value="Cybersecurity">Cybersecurity</option>
+            </select>
+            <span class="error" id="err-programme"></span>
+          </div>
+
+          <div class="input-box">
+            <label>Year</label>
+            <div class="radio-group">
+              <label><input type="radio" name="year" value="1" required /> Year 1</label>
+              <label><input type="radio" name="year" value="2" /> Year 2</label>
+              <label><input type="radio" name="year" value="3" /> Year 3</label>
+            </div>
+            <span class="error" id="err-year"></span>
+          </div>
+
+          <div class="input-box">
+            <label for="interests">Interests</label>
+            <textarea id="interests" rows="3"></textarea>
+          </div>
+
+          <div class="input-box">
+            <label for="photo">Photo URL</label>
+            <input type="url" id="photo" />
+          </div>
+
+          <button type="submit" class="btn">Register</button>
+        </form>
       </div>
 
-      <div class="input-box">
-        <label for="lastName">Last Name</label>
-        <input type="text" id="lastName" required />
-        <span class="error" id="err-lastName"></span>
-      </div>
-
-      <div class="input-box">
-        <label for="email">Email</label>
-        <input type="email" id="email" required />
-        <span class="error" id="err-email"></span>
-      </div>
-
-      <div class="input-box">
-        <label for="programme">Programme</label>
-        <select id="programme" required>
-          <option value="">Select a Programme </option>
-          <option value="Computer Science">Computer Science</option>
-          <option value="Software Engineering">Software Engineering</option>
-          <option value="Data Science">Data Science</option>
-          <option value="Cybersecurity">Cybersecurity</option>
-        </select>
-        <span class="error" id="err-programme"></span>
-      </div>
-
-      <div class="input-box">
-        <label>Year</label>
-        <div class="radio-group">
-          <label><input type="radio" name="year" value="1" required /> Year 1</label>
-          <label><input type="radio" name="year" value="2" /> Year 2</label>
-          <label><input type="radio" name="year" value="3" /> Year 3</label>
+      <div class="display-section">
+        <div id="cardsContainer">
+          <h2>Registered Students</h2>
+          <!-- Cards will appear here -->
         </div>
-        <span class="error" id="err-year"></span>
+
+        <div id="summaryTable">
+          <h2>Summary Table</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Programme</th>
+                <th>Year</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Rows will be added here -->
+            </tbody>
+          </table>
+        </div>
       </div>
-
-      <div class="input-box">
-        <label for="interests">Interests</label>
-        <textarea id="interests" rows="3"></textarea>
-      </div>
-
-      <div class="input-box">
-        <label for="photo">Photo URL</label>
-        <input type="url" id="photo" />
-      </div>
-
-      <button type="submit" class="btn">Register</button>
-    </form>
-  </div>
-  
-<div class="display-section">
-  <div id="cardsContainer">
-    <h2>Registered Students</h2>
-     <!-- card placement-->
+    </div>
   </div>
 
-  <div id="summaryTable">
-    <h2>Summary Table</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Programme</th>
-          <th>Year</th>
-        </tr>
-      </thead>
-      <tbody>
-        <!-- rows-->
-      </tbody>
-    </table>
-  </div>
-</div>
-
-
-</div>
-
-  </div>
+  <script src="script.js"></script>
 </body>
 </html>
+

@@ -6,10 +6,10 @@
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    
+    // Clear previous errors
     document.querySelectorAll(".error").forEach(el => el.textContent = "");
 
-    
+    // Get form values
     const firstName = document.getElementById("firstName").value.trim();
     const lastName = document.getElementById("lastName").value.trim();
     const email = document.getElementById("email").value.trim();
@@ -20,7 +20,7 @@
 
     let isValid = true;
 
-    
+    // Validation
     if (!firstName) {
       document.getElementById("err-firstName").textContent = "First name is required.";
       isValid = false;
@@ -50,7 +50,7 @@
 
     const yearValue = year.value;
 
-    
+    // Create card
     const card = document.createElement("div");
     card.className = "card";
 
@@ -69,7 +69,7 @@
 
     cardsContainer.appendChild(card);
 
-    
+    // Add to summary table
     const row = document.createElement("tr");
     row.innerHTML = `
       <td>${firstName} ${lastName}</td>
@@ -78,13 +78,13 @@
     `;
     summaryTableBody.appendChild(row);
 
-    
+    // Remove functionality
     card.querySelector(".remove-btn").addEventListener("click", () => {
       card.remove();
       row.remove();
     });
 
-    
+    // Reset form
     form.reset();
   });
 });
