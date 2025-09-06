@@ -1,5 +1,5 @@
-# Lab4_Registration
-A registration form with html, css and java script
+Full name: elsa kumwimba
+link to my gitHub repository:(https://github.com/k2elsa/Lab4_Registration.git)
 
 steps:
 - wrote down the the basic html synthax and the structure of the form
