@@ -6,10 +6,8 @@
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    
     document.querySelectorAll(".error").forEach(el => el.textContent = "");
 
-    
     const firstName = document.getElementById("firstName").value.trim();
     const lastName = document.getElementById("lastName").value.trim();
     const email = document.getElementById("email").value.trim();
@@ -50,7 +48,6 @@
 
     const yearValue = year.value;
 
-  
     const card = document.createElement("div");
     card.className = "card";
 
@@ -69,7 +66,6 @@
 
     cardsContainer.appendChild(card);
 
-    
     const row = document.createElement("tr");
     row.innerHTML = `
       <td>${firstName} ${lastName}</td>
@@ -78,13 +74,11 @@
     `;
     summaryTableBody.appendChild(row);
 
-    
     card.querySelector(".remove-btn").addEventListener("click", () => {
       card.remove();
       row.remove();
     });
 
-    
     form.reset();
   });
 });
