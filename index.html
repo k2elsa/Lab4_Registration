@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -9,7 +9,9 @@
 <body>
   <div class="container">
     <h1>Student Registration</h1>
+
     <div class="flex-wrapper">
+      <!-- Left: Form -->
       <div class="form-section">
         <form id="registrationForm">
           <div class="input-box">
@@ -33,7 +35,7 @@
           <div class="input-box">
             <label for="programme">Programme</label>
             <select id="programme" required>
-              <option value="">Select a Programme </option>
+              <option value="">Select a Programme</option>
               <option value="Computer Science">Computer Science</option>
               <option value="Software Engineering">Software Engineering</option>
               <option value="Data Science">Data Science</option>
@@ -58,40 +60,42 @@
           </div>
 
           <div class="input-box">
-            <label for="photo">Photo URL</label>
-            <input type="url" id="photo" />
+            <label for="photo">Upload Photo</label>
+            <input type="file" id="photo" accept="image/*" />
+            <span class="error" id="err-photo"></span>
           </div>
 
           <button type="submit" class="btn">Register</button>
         </form>
       </div>
 
+      <!-- Right: Cards -->
       <div class="display-section">
-        <div id="cardsContainer">
-          <h2>Registered Students</h2>
-          <!-- Cards here -->
-        </div>
-
-        <div id="summaryTable">
-          <h2>Summary Table</h2>
-          <table>
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Programme</th>
-                <th>Year</th>
-              </tr>
-            </thead>
-            <tbody>
-              <!-- Rows  -->
-            </tbody>
-          </table>
-        </div>
+        <h2>Students cards will appear here</h2>
+        <div id="cardsContainer"></div>
       </div>
+    </div>
+
+    <!-- Centered Summary Table -->
+    <div id="summaryTable">
+      <h2>Summary Table</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Programme</th>
+            <th>Year</th>
+            <th>Interests</th>
+            <th>Photo</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
     </div>
   </div>
 
   <script src="script.js"></script>
 </body>
 </html>
-
